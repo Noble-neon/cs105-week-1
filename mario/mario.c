@@ -10,12 +10,14 @@ int main(void)
         scanf("%i", &height);        
     }
 
-    for(; height > 0; height --) {
+    for(; height > 0; height--) {
+        for(int j = 0; height>= j; j++){
+            printf(" ");
+        } 
         for(int i = 0; sizeNow >= i; i++){
             printf("#");
         }
         printf("\n");
         sizeNow++;
-
     }
 }
