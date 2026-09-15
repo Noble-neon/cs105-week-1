@@ -18,9 +18,19 @@ int main(void)
     } while ((dirams >= 10) && !(dirams % 10 == 0));
 
     int minimum = 0;
+
+    int coins[] = {500, 300, 100, 50, 20, 10};
+    for (int i = 0; i < 6; i++){
+        if (dirams >= coins[i]){
+            minimum += (dirams / coins[i]);
+            dirams -= (dirams / coins[i]) * coins[i];
+        }
+    }
+
+    /* The old ugly version
     if (dirams >= 500) {
-        minimum = (dirams / 500);
-        dirams -= minimum * 500;
+        minimum += (dirams / 500);
+        dirams -=  (dirams / 500) * 500;
     } 
     if (dirams >= 300) {
         minimum += (dirams / 300);
@@ -41,11 +51,10 @@ int main(void)
     if (dirams >= 10) {
         minimum += (dirams / 10);
         dirams -= (dirams / 10) * 10;
-    }
+    } */
     printf(" %i", minimum);
     // check whether it is divisible by the bigest number now
     // find out how many  whole biggest numbers are in the dirams  
     // and make th ecode ignore the part smaller than the biggest number
     // add to minimum each time 
-    //
 }
