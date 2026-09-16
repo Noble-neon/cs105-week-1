@@ -15,7 +15,7 @@ int main(void)
             printf(" ");       // add spaces
         } 
         for(int i = 0; sizeNow >= i; i++){
-            printf("#");      // do the actual job
+            printf("#");      // actually print #
         }
         printf("\n");
         sizeNow++;
