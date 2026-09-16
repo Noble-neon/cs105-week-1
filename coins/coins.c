@@ -27,7 +27,8 @@ int main(void)
         }
     }
 
-    /* The old ugly version
+    // Integers drop the decimal part when divided
+    /* The old ugly version:
     if (dirams >= 500) {
         minimum += (dirams / 500);
         dirams -=  (dirams / 500) * 500;
