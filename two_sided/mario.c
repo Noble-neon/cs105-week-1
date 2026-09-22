@@ -13,9 +13,6 @@ int main(void)
 
     copy_height = height;      // save original height 
 
-    for(int j = 0; height>= j; j++){
-            printf(" ");       // add spaces
-        } 
     for(; height > 0; height--) {
         for(int j = 0; height>= j; j++){
             printf(" ");       // add spaces
